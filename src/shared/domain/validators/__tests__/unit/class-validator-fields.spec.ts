@@ -21,6 +21,6 @@ describe('ClassValidatorFields unit tests', () => {
         expect(sut.validate(null)).toBeFalsy()
         expect(spyValidateSync).toHaveBeenCalled()
         expect(sut.validatedData).toBeNull()
-        expect(sut.errors).toStrictEqual({ field: { isRequired: 'test error' } })
+        expect(sut.errors).toStrictEqual({ field: ['test error'] })
     })
 })
